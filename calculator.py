@@ -144,6 +144,7 @@ if __name__ == "__main__":
     ## CLASSIFICATION ONE ##
     # The average mark of the 100 credits worth of modules with the highest mark 
     # at level 6 or above
+    print("ALGORITHM 1:")
     c1_mods = year_three_modules
     c1_perm, c1_grade = classification(c1_mods, 100, 100, 0, 0)
     print_grade(c1_perm, c1_grade)
@@ -151,6 +152,7 @@ if __name__ == "__main__":
     ## CLASSIFICATION TWO ##
     # The average mark of the 220 credits worth of modules with the highest mark 
     # at level 5 and above (to include a maximum of 120 credits at Level 5)
+    print("ALGORITHM 2:")
     c2_mods = year_three_modules + year_two_modules
     c2_perm, c2_grade = classification(c2_mods, 220, 120, 120, 0)
     print_grade(c2_perm, c2_grade)
@@ -158,13 +160,14 @@ if __name__ == "__main__":
     ## CLASSIFICATION THREE ##
     # The average mark of the 300 credits worth of modules with the highest mark 
     # at levels 4 and above (to include a maximum of 120 credits at each of Levels 4 and 5)
+    print("ALGORITHM 3:")
     c3_mods = year_three_modules + year_two_modules + year_one_modules
     c3_perm, c3_grade = classification(c3_mods, 300, 120, 120, 120)
     print_grade(c3_perm, c3_grade)
 
-    print("\t############################")
-    print("\t#  HIGHEST CLASSIFICATION  #")
-    print("\t############################\n")
+    print("############################")
+    print("#  HIGHEST CLASSIFICATION  #")
+    print("############################\n")
     best_grade = max(c1_grade, c2_grade, c3_grade)
     print("\tGrade: " + str(best_grade))
     print("\tClassification: " + get_classification_name(best_grade))
