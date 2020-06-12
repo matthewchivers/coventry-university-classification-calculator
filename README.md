@@ -32,4 +32,9 @@ Grade information should go under this comment, as indicated using template vari
 
 Template is pre-populated for Computer Science Students Graduating in 2020 who took a placement year).
 
+Once the grades (Modules) are populated, run the script! Something like:
+``` bash
+$ python calculator.py
+```
+
 The third classification algorithm can take a second or two to calculate, as the code employs backtracking to generate all possible permutations. No efficiency has been considered - just wanted to quickly create a tool for the job. Recommendations welcome.
