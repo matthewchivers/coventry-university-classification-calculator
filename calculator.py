@@ -116,7 +116,7 @@ if __name__ == "__main__":
         Module(1, "121COM", 20, 40), # Introduction to Computing
         Module(1, "122COM", 10, 40), # Introduction to Algorithms
         Module(1, "124MS", 20, 40), # Logic and Sets
-        Module(1, "Add+", 20, 40), # Add+Vantage
+        Module(1, "Add+", 10, 40), # Add+Vantage
     ]
 
     year_two_modules = [
