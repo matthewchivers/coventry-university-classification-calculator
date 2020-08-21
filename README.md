@@ -2,6 +2,11 @@
 
 ## Coventry University
 
+### Pre-amble
+This calculator has not been officially verified as accurate against Coventry University's internal systems. However, it does follow the algorithms correctly (to the best of our knowledge). 
+
+The calculator did make correct calculations for the cohort graduating in Summer 2020 (for those students kind enough to test it, anyway).
+
 ### Classifications
 
 At the time of writing, there are three methods of classification:
@@ -9,18 +14,21 @@ At the time of writing, there are three methods of classification:
 2) The average mark of the 220 credits worth of modules with the highest mark at level 5 and above (to include a maximum of 120 credits at Level 5)
 3) The average mark of the 300 credits worth of modules with the highest mark at levels 4 and above (to include a maximum of 120 credits at each of Levels 4 and 5)
 
-This calculator assumes a three year degree. Roughly corresponding with:
+This calculator currently assumes a classic three year degree plus industrial placement. Roughly corresponding with:
 
 * Year One = Level 4
 * Year Two = Level 5
-* Placement Year = Level 5
+* Industrial Placement Year = Level 5
 * Year Three = Level 6
 
 ## Instructions
 
-Insert your grade information into the code directly. The program takes no input at runtime.
+> #### Note
+> The input functionality ideally needs changing to be more robust. Either to take (CLI) input at runtime or else from a (CSV/JSON) file. Hard-coding inputs should be avoided, but this was hashed together alongside final-year deadlines and revision.
 
-There is a section similar to:
+#### Insert grade information into the code directly:
+
+There is a code-block similar to:
 ``` python
 if __name__ == "__main__":
 
@@ -28,13 +36,15 @@ if __name__ == "__main__":
     # INSERT GRADE INFORMATION BELOW #
     ################################## 
 ```
-Grade information should go under this comment, as indicated using template variables.
 
-Template is pre-populated for Computer Science Students Graduating in 2020 who took a placement year).
+The modules displayed under this comment block should be fairly self-explanatory. Use them as a template for your own grades/modules.
 
-Once the grades (Modules) are populated, run the script! Something like:
+> The current information is pre-populated for Computer Science Students Graduating in 2020, including a placement year.
+
+Once the grades (modules) are populated, run the script! Something like:
 ``` bash
 $ python calculator.py
 ```
+The output will inform you of the classification you should be awarded, and lists the calculations from all algorithms for information purposes.
 
-The third classification algorithm can take a second or two to calculate, as the code employs backtracking to generate all possible permutations. No efficiency has been considered - just wanted to quickly create a tool for the job. Recommendations welcome.
+The calculations employ backtracking to gain all grade/module permutations. For this reason, the third classification algorithm can take a considerable amount of time to calculate (though it has never taken longer than a few seconds in my own tests).
