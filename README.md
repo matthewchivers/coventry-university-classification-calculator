@@ -39,8 +39,12 @@ if __name__ == "__main__":
 
 The modules displayed under this comment block should be fairly self-explanatory. Use them as a template for your own grades/modules.
 
+**Important**
+The structure of the arguments taken by "Module" is `Year, Code, Credits, Grade, Required`. For example: `Module(3, "303COM", 30, 40, True)` corresponds with: Year 3, Module code 303COM, 30 Credits, Grade 40, and "True" indicates that the module **is** required as part of the classification. Currently only one module is populated as required: the dissertation/final-year-project. It is only necessary to declare a value in this argument for required modules, all others default to "False".
+
 > The current information is pre-populated for Computer Science Students Graduating in 2020, including a placement year.
 
+#### Run the script
 Once the grades (modules) are populated, run the script! Something like:
 ``` bash
 $ python calculator.py
